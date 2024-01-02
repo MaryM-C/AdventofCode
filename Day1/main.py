@@ -43,7 +43,7 @@ def process_line(line, coordinates_pattern):
     calibration_as_str = ''.join(calibration_digits)
     
     #For Debugging Purposes
-    print_each_line_together_with_calibration(line, calibration_as_str)
+    #print_each_line_together_with_calibration(line, calibration_as_str)
 
     return int(calibration_as_str)
 
@@ -61,9 +61,9 @@ def sum_of_calibration_values(lines, calibration_pattern):
     return total_sum
 
 if __name__ == "__main__":
-    input_file_path = 'input.txt'
+    input_file_path = 'Day1\input.txt'
     lines = read_lines_from_file(input_file_path)
     sum_1 = sum_of_calibration_values(lines, coordinates_pattern_1)
     sum_2 = sum_of_calibration_values(lines, coordinates_pattern_2)
-    print("Part 1 Sum: {} \nPart 2 Sum: {}".format(sum_1, sum_2))
-
+    print("Part 1 Sum: " + str(sum_1))
+    print("Part 2 Sum: " + str(sum_2))
